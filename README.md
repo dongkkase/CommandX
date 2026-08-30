@@ -53,7 +53,7 @@ macOS에서 파일을 이동하려면 보통 복사한 뒤 `Option-Command-V`를
 
 - **로그인 시 실행**: Mac을 켤 때 CommandX를 자동으로 시작합니다.
 - **메뉴 막대 아이콘 숨기기**: 설정을 마친 뒤 메뉴 막대를 더 간결하게 유지합니다.
-- **Command-X 안정 처리 모드**: Finder의 복사가 확인된 뒤에만 이동 대기 상태로 전환합니다.
+- **Command-X 안정 처리 모드**: Finder 복사 후 클립보드 변경이 잠시 안정된 뒤 이동 대기 상태로 전환합니다.
 
 메뉴 막대 아이콘을 숨긴 뒤에는 CommandX를 다시 실행하거나 `Option-Command-X`를 눌러 설정을 열 수 있습니다.
 
@@ -73,6 +73,8 @@ macOS에서 파일을 이동하려면 보통 복사한 뒤 `Option-Command-V`를
 
 Release의 macOS ZIP은 Apple Silicon과 Intel Mac을 모두 지원하는 Universal 앱으로 제공됩니다. 공식 ZIP을 설치했는데도 macOS가 개발자를 확인할 수 없다고 표시하면 보안 설정을 우회하지 말고 파일을 다시 다운로드하거나 [Issue를 등록](https://github.com/dongkkase/CommandX/issues/new/choose)해 주세요.
 
+권한과 파일 이동 테스트에는 Release Assets의 Developer ID 서명·공증 ZIP만 사용하세요. 소스에서 직접 만든 Debug, Local Release 또는 Unsigned Test 빌드는 정식 앱과 다른 식별자를 사용하며 `/Applications` 설치용이 아닙니다.
+
 **[CommandX 최신 버전 다운로드](https://github.com/dongkkase/CommandX/releases/latest)**
 
 ## 권한 문제 해결
@@ -80,7 +82,7 @@ Release의 macOS ZIP은 Apple Silicon과 Intel Mac을 모두 지원하는 Univer
 CommandX는 Finder의 단축키를 감지하고 Finder에 이동 명령을 전달하기 위해 macOS의 손쉬운 사용 권한이 필요합니다. 단축키가 동작하지 않으면 다음 순서로 확인해 주세요.
 
 1. CommandX 설정에서 현재 권한 안내를 확인합니다.
-2. 손쉬운 사용을 허용한 뒤 `단축키 전송 권한 적용`이 나타나면 `권한 적용 완료`를 누릅니다.
+2. 손쉬운 사용을 허용하면 단축키 전송 권한 요청이 이어집니다. 별도 안내가 남아 있으면 `권한 적용 완료`를 누릅니다.
 3. `시스템 설정 > 개인정보 보호 및 보안 > 손쉬운 사용`에서 CommandX를 껐다가 다시 켭니다.
 4. 계속 동작하지 않으면 기존 CommandX 항목을 제거하고 `/Applications/CommandX.app`을 다시 추가합니다.
 5. CommandX를 완전히 종료한 뒤 `/Applications/CommandX.app`을 다시 실행합니다.

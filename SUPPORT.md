@@ -2,7 +2,7 @@
 
 ## 먼저 확인할 사항
 
-1. 최신 버전을 [Releases](https://github.com/dongkkase/CommandX/releases)에서 설치했는지 확인합니다.
+1. [Releases](https://github.com/dongkkase/CommandX/releases)의 Assets에서 최신 서명·공증 ZIP을 설치했는지 확인합니다.
 2. CommandX가 `/Applications/CommandX.app`에서 실행 중인지 확인합니다.
 3. 설정 화면의 권한 안내를 모두 완료합니다.
 4. Finder에서 파일명 변경이나 검색 입력 중이 아닌지 확인합니다.
@@ -16,7 +16,7 @@
 2. 기존 CommandX 항목을 제거합니다.
 3. `/Applications/CommandX.app`을 다시 추가하고 활성화합니다.
 4. CommandX를 다시 실행합니다.
-5. 앱에 `단축키 전송 권한 적용`이 표시되면 `권한 적용 완료`를 누릅니다.
+5. 단축키 전송 권한 요청을 완료합니다. 별도 안내가 남아 있으면 `권한 적용 완료`를 누릅니다.
 
 ## 문제 제보
 
