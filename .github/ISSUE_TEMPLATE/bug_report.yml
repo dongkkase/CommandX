@@ -1,0 +1,76 @@
+name: 버그 신고 / Bug report
+description: CommandX에서 재현되는 문제를 알려주세요.
+title: "[Bug] "
+labels:
+    - bug
+body:
+    - type: markdown
+      attributes:
+          value: |
+              개인 파일명, 전체 파일 경로, 클립보드 내용 또는 계정 정보를 첨부하지 마세요.
+
+    - type: input
+      id: commandx_version
+      attributes:
+          label: CommandX 버전
+          description: 설정 화면 하단의 버전과 빌드 번호를 입력해 주세요.
+          placeholder: "예: 0.1.0 (2)"
+      validations:
+          required: true
+
+    - type: input
+      id: macos_version
+      attributes:
+          label: macOS 버전
+          placeholder: "예: macOS 15.6"
+      validations:
+          required: true
+
+    - type: dropdown
+      id: mac_type
+      attributes:
+          label: Mac 종류
+          options:
+              - Apple Silicon
+              - Intel
+              - 확인하지 못함
+      validations:
+          required: true
+
+    - type: textarea
+      id: reproduction
+      attributes:
+          label: 재현 순서
+          description: 개인정보를 제외하고 문제를 재현하는 순서를 작성해 주세요.
+          placeholder: |
+              1. Finder에서 파일을 선택합니다.
+              2. Command-X를 누릅니다.
+              3. ...
+      validations:
+          required: true
+
+    - type: textarea
+      id: expected
+      attributes:
+          label: 기대한 결과
+      validations:
+          required: true
+
+    - type: textarea
+      id: actual
+      attributes:
+          label: 실제 결과
+      validations:
+          required: true
+
+    - type: checkboxes
+      id: checks
+      attributes:
+          label: 확인 사항
+          options:
+              - label: 최신 Release를 사용하고 있습니다.
+                required: true
+              - label: CommandX를 /Applications에서 실행했습니다.
+                required: true
+              - label: 제보 내용에서 개인 파일명과 전체 경로를 제거했습니다.
+                required: true
